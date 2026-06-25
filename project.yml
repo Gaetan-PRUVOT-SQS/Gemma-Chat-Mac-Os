@@ -1,0 +1,50 @@
+name: GemmaChat
+options:
+  bundleIdPrefix: com.gaetan
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    PRODUCT_BUNDLE_IDENTIFIER: com.gaetan.gemmachat
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: ""
+    ENABLE_HARDENED_RUNTIME: NO
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+
+packages:
+  Gemma4Swift:
+    url: https://github.com/VincentGourbin/gemma-4-swift-mlx
+    branch: main
+
+targets:
+  GemmaChat:
+    type: application
+    platform: macOS
+    sources:
+      - path: GemmaChat
+    settings:
+      base:
+        INFOPLIST_FILE: GemmaChat/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.gaetan.gemmachat
+        ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    dependencies:
+      - package: Gemma4Swift
+        product: Gemma4Swift
+
+  GemmaChatTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: GemmaChatTests
+      - path: GemmaChat/Views/Markdown/MathPreprocess.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.gaetan.gemmachat.tests
+        GENERATE_INFOPLIST_FILE: YES

@@ -1,0 +1,20 @@
+# Build / dérivés
+.build/
+DerivedData/
+build/
+*.xcodeproj
+*.xcworkspace
+
+# App compilée
+GemmaChat.app/
+
+# Xcode user data
+xcuserdata/
+*.xcuserstate
+.swiftpm/
+
+# SPM
+Package.resolved
+
+# macOS
+.DS_Store
