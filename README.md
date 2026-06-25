@@ -9,6 +9,11 @@
 Application macOS native (SwiftUI) de chat avec **Gemma 4**, inférence **MLX** sur Apple Silicon,
 multimodale (texte · image · audio). Aucune donnée ne quitte la machine.
 
+### [⬇️ Télécharger la dernière version (.dmg)](https://github.com/Gaetan-PRUVOT-SQS/Gemma-Chat-Mac-Os/releases/latest)
+
+macOS 15+ · Apple Silicon (M1+) · 16 Go RAM conseillés
+*App non notarisée : au 1er lancement, **clic droit → Ouvrir**. ([détails](https://github.com/Gaetan-PRUVOT-SQS/Gemma-Chat-Mac-Os/releases/latest))*
+
 </div>
 
 ---
